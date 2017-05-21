@@ -5,10 +5,11 @@ machine:
     
 dependencies:
   override:
+    - git submodule update --init --recursive
     - chmod +x gradlew
     - ./gradlew setupCIWorkspace
     
 compile:
   override:
-    - ./gradlew build
+    - ./gradlew build -source 7
     - mv ./build/libs/* $CIRCLE_ARTIFACTS
