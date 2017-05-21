@@ -15,6 +15,9 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'maven-publish'
 
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
 ext.buildnumber = 0
 if (System.getenv('BUILD_NUMBER') != null)
     project.buildnumber = System.getenv('BUILD_NUMBER')
