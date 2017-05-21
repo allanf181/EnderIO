@@ -11,5 +11,5 @@ dependencies:
     
 compile:
   override:
-    - ./gradlew build -source 7
+    - ./gradlew build
     - mv ./build/libs/* $CIRCLE_ARTIFACTS
